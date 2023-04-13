@@ -21,6 +21,8 @@ def plota(f,a,b):
   plt.show()
   
 def f(x):
-  return x + 1 - (2 * np.sin(np.pi * x))
+  return np.e**x + x**3 - 2
 
-#plota(f, -5, 5)
+#print(f(0.75))
+plota(f, -1, 1)
+
