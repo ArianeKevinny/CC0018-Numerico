@@ -85,10 +85,9 @@ def ponto_fixo(g,p0,tol,N,tabela=False):
 
 
 def f(x):
-    return x - 1.0 + np.sqrt(2)*np.cos(x)
+    return 2/x - (1/(x**2))
 
 def g(x):
-    return 1.0 - np.sqrt(2)*np.cos(x)
+    return -1 * ( x**2 - 4*x + 2)
 
-
-ponto_fixo(g,-0.5,1e-3,100,True)
+print(ponto_fixo(g,0.9,1e-3,100,True))

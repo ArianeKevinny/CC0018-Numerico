@@ -14,6 +14,7 @@ def plota(f,a,b):
   plt.axhline(0, color='black', linewidth=1)
   
   x = np.linspace(a,b,100)
+  
   y = f(x)
   ax.plot(x,y)
   plt.xlim([a, b])
@@ -21,8 +22,7 @@ def plota(f,a,b):
   plt.show()
   
 def f(x):
-  return np.e**x + x**3 - 2
+  return - 3 * np.tan(2*x) + x
 
-#print(f(0.75))
-plota(f, -1, 1)
+plota(f, -3, 3)
 

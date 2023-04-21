@@ -53,6 +53,8 @@ def bissecao(f,a,b,tol,N,tabela=False):
             print(f"{i:^11d} {a:+.5e} {b:+.5e} {p:+.5e} {fa:+.5e} {fb:+.5e} {fp:+.5e}")
         
         if 0.5*(b-a) < tol:
+            print("a", a)
+            print("b",b)
             break
         
         i = i + 1
@@ -67,12 +69,14 @@ def bissecao(f,a,b,tol,N,tabela=False):
         i = i - 1
 
     return i,p
-
     
 def f(x):
-    return np.log(x) + x**2 -3
+    return 1 - x + np.sin(x)
+
+def iteracoes(a, b, e):
+    print(np.log10((b-a)/e))
     
-print(bissecao(f,1,2,1e-3,100,True))
+print(bissecao(f,1,2,1e-1,100,True))
 
     
     
